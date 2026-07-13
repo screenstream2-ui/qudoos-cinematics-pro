@@ -511,17 +511,17 @@ function ExperienceTimeline() {
     {
       year: "2025",
       title: "Mobile Beginnings",
-      body: "Started editing on Alight Motion — learning timing, keyframes and creative visual language on a phone.",
+      body: "Started editing on Alight Motion — learning timing, keyframes, and creative visual language directly on a phone.",
     },
     {
       year: "Mid 2025",
-      title: "Desktop Transition",
-      body: "Moved to Premiere Pro and After Effects — professional workflows, deeper motion design and better color control.",
+      title: "Deep Dive into Design",
+      body: "Shifted focus toward mastering visual aesthetics. Dedicated time to studying composition, typography, and color theory to understand what truly makes a design stand out.",
     },
     {
       year: "2026",
-      title: "Cinematic Craft",
-      body: "Refined storytelling, pacing, transitions, motion graphics and cinematic color grading — delivering premium content for creators and brands.",
+      title: "The Desktop Leap & Cinematic Craft",
+      body: "Transitioned fully to PC using Premiere Pro and After Effects. Combined advanced software power with refined design principles to deliver premium motion graphics, complex transitions, and cinematic color grading for brands.",
     },
   ];
   return (
