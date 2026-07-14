@@ -20,6 +20,10 @@ import {
   Menu,
   X,
   ChevronDown,
+  ShieldCheck,
+  RefreshCcw,
+  Ban,
+  Clock,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 import profileHero from "@/assets/profile-hero.jpeg";
@@ -758,40 +762,71 @@ function Testimonials() {
 }
 
 function RecentProjects() {
-  // Placeholders — replace src with real YouTube embed URLs any time.
-  const videos = [
-    { id: "dQw4w9WgXcQ", title: "Recent Project 01 — replace with your YouTube link" },
-    { id: "dQw4w9WgXcQ", title: "Recent Project 02 — replace with your YouTube link" },
-    { id: "dQw4w9WgXcQ", title: "Recent Project 03 — replace with your YouTube link" },
-    { id: "dQw4w9WgXcQ", title: "Recent Project 04 — replace with your YouTube link" },
+  const terms = [
+    {
+      Icon: ShieldCheck,
+      title: "Payment & Priority",
+      points: [
+        "50% advance payment is required before starting to prioritize your project.",
+        "Final high-quality, downloadable files are shared immediately upon receipt of full payment.",
+      ],
+    },
+    {
+      Icon: RefreshCcw,
+      title: "Samples & Revisions",
+      points: [
+        "No free samples or complimentary edits; previous work and references will be shared to align styles.",
+        "Revision requests must be submitted within 48 hours of draft delivery, or the project is marked closed.",
+        "Revisions due to unclear initial direction are treated as new requests.",
+      ],
+    },
+    {
+      Icon: Ban,
+      title: "Content Restrictions",
+      points: [
+        "Strictly no content featuring cuss/offensive words, double meanings, roasting, or bullying.",
+        "No projects promoting deceptive money-making schemes, violence, hate speech, or political advocacy/criticism.",
+      ],
+    },
+    {
+      Icon: Clock,
+      title: "Timelines & Privacy",
+      points: [
+        "Delivery: 24–48 hours for short-form edits; 3–7 days for complex long-form edits.",
+        "Security: All raw files and project data are securely and permanently deleted from our storage 24 hours after final delivery to guarantee complete confidentiality.",
+      ],
+    },
   ];
   return (
     <section className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Recent Projects"
-          title="Latest | Work"
-          subtitle="Embedded YouTube previews — paste your real video IDs when ready."
+          eyebrow="Terms of Cooperation"
+          title="Terms of | Cooperation"
+          subtitle="Clear conditions and professional boundaries designed to deliver exceptional results."
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {videos.map((v, i) => (
+          {terms.map(({ Icon, title, points }, i) => (
             <div
               key={i}
-              className="reveal hover-lift glass overflow-hidden rounded-3xl"
-              style={{ transitionDelay: `${i * 60}ms` }}
+              className="reveal hover-lift glass rounded-3xl p-8"
+              style={{
+                transitionDelay: `${i * 60}ms`,
+                boxShadow: "0 0 40px -12px oklch(0.62 0.24 300 / 0.35)",
+              }}
             >
-              <div className="aspect-video w-full">
-                <iframe
-                  className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${v.id}`}
-                  title={v.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  data-editable={`youtube-embed-${i + 1}`}
-                />
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[oklch(0.62_0.24_300/0.15)] ring-1 ring-[oklch(0.62_0.24_300/0.35)]">
+                <Icon className="h-6 w-6 text-[#C4B5FD]" />
               </div>
-              <div className="p-4 text-sm text-muted-foreground">{v.title}</div>
+              <h3 className="mb-4 text-xl font-semibold tracking-tight">{title}</h3>
+              <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+                {points.map((p, j) => (
+                  <li key={j} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#A855F7]" />
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
