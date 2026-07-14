@@ -422,7 +422,7 @@ function PortfolioSection() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Selected | Projects"
-          subtitle="Placeholders below — swap thumbnails with your project screenshots at any time."
+          
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((c, i) => (
