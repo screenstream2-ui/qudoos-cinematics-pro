@@ -253,18 +253,38 @@ function Hero() {
 
           <div className="reveal mt-10 grid max-w-lg grid-cols-3 gap-4">
             {[
-              ["1Y+", "Experience"],
-              ["100+", "Edits Delivered"],
-              ["24h", "Avg. Turnaround"],
-            ].map(([n, l]) => (
-              <div key={l} className="glass rounded-2xl p-4 text-center">
-                <div className="text-2xl font-bold text-gradient">{n}</div>
-                <div className="mt-1 text-[11px] uppercase tracking-widest text-muted-foreground">
-                  {l}
+              { n: "1Y+", l: "Experience" },
+              { n: "100+", l: "Edits Delivered" },
+              {
+                n: "4400+",
+                l: "TikTok Followers",
+                href: "https://www.tiktok.com/@qudoosedits?is_from_webapp=1&sender_device=pc",
+              },
+            ].map(({ n, l, href }) =>
+              href ? (
+                <a
+                  key={l}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass rounded-2xl p-4 text-center transition hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(168,85,247,0.35)]"
+                >
+                  <div className="text-2xl font-bold text-gradient">{n}</div>
+                  <div className="mt-1 text-[11px] uppercase tracking-widest text-muted-foreground">
+                    {l}
+                  </div>
+                </a>
+              ) : (
+                <div key={l} className="glass rounded-2xl p-4 text-center">
+                  <div className="text-2xl font-bold text-gradient">{n}</div>
+                  <div className="mt-1 text-[11px] uppercase tracking-widest text-muted-foreground">
+                    {l}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
+
         </div>
       </div>
 
