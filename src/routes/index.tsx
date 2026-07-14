@@ -321,9 +321,24 @@ function Intro() {
 
 function FeaturedWork() {
   const items = [
-    { img: portfolio1, tag: "Long-form YouTube", title: "Cinematic Vlog Edit" },
-    { img: portfolio2, tag: "Instagram Reel", title: "High-Retention Reel" },
-    { img: portfolio3, tag: "Color Grading", title: "Filmic Color Pass" },
+    {
+      id: "f2ml5npNBuM",
+      tag: "Trending Reel",
+      title: "Modern Motion Graphics",
+      desc: "Modern Instagram-style edits utilizing slick typography, dynamic motion graphics, and highly engaging visual pacing.",
+    },
+    {
+      id: "-EGJjOOI5hQ",
+      tag: "Cinematic Story",
+      title: "Motivational Narrative",
+      desc: "High-impact storytelling and seamless pacing crafted to deliver inspiring, high-retention cinematic experiences.",
+    },
+    {
+      id: "IHDWnKDeSUw",
+      tag: "AI Voice & Motion",
+      title: "Dynamic Voiceover Edit",
+      desc: "Trendy, fast-paced edits incorporating advanced motion graphics matched seamlessly with clean AI-voiceover narration.",
+    },
   ];
   return (
     <section className="relative py-24">
@@ -336,25 +351,24 @@ function FeaturedWork() {
         <div className="grid gap-6 md:grid-cols-3">
           {items.map((it, i) => (
             <div
-              key={i}
-              className="reveal hover-lift zoom-img group relative overflow-hidden rounded-3xl glass"
+              key={it.id}
+              className="reveal hover-lift group relative overflow-hidden rounded-3xl glass"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className="aspect-[4/5] w-full">
-                <img
-                  src={it.img}
-                  alt={`${it.title} — featured ${it.tag} project thumbnail`}
+              <div className="aspect-[9/16] w-full bg-black">
+                <iframe
+                  src={`https://www.youtube.com/embed/${it.id}?rel=0&modestbranding=1`}
+                  title={it.title}
                   loading="lazy"
-                  className="h-full w-full object-cover opacity-90"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="h-full w-full border-0"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
+              <div className="p-5">
                 <div className="text-[10px] uppercase tracking-widest text-[#C4B5FD]">{it.tag}</div>
                 <div className="mt-1 text-lg font-semibold">{it.title}</div>
-              </div>
-              <div className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full glass-strong opacity-0 transition-opacity group-hover:opacity-100">
-                <Play className="h-4 w-4" />
+                <p className="mt-2 text-sm text-white/70">{it.desc}</p>
               </div>
             </div>
           ))}
@@ -363,6 +377,7 @@ function FeaturedWork() {
     </section>
   );
 }
+
 
 function Skills() {
   const tools = [
