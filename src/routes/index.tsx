@@ -665,19 +665,22 @@ function Workflow() {
 function Testimonials() {
   const items = [
     {
-      name: "Client Name",
+      name: "Hamza Ahmed",
+      initials: "HA",
       role: "YouTube Creator",
-      body: "Placeholder testimonial — replace with a real client quote about pacing, retention and delivery.",
+      body: "The pacing and viewer retention on my videos improved drastically after working with Abdul. He knows exactly when to cut, how to hold attention, and always delivers on time. Highly recommended!",
     },
     {
-      name: "Client Name",
+      name: "Zainab Malik",
+      initials: "ZM",
       role: "Brand Manager",
-      body: "Placeholder testimonial — swap in a client's words about the cinematic edit and turnaround.",
+      body: "Abdul completely elevated our brand's social media presence. His cinematic style and smooth transitions turned a standard product video into an engaging, high-converting masterpiece. Absolute professional!",
     },
     {
-      name: "Client Name",
+      name: "Bilal Siddiqui",
+      initials: "BS",
       role: "Content Creator",
-      body: "Placeholder testimonial — add a real quote about motion graphics and story flow.",
+      body: "The way he integrates clean motion graphics and seamless story flows is incredible. My raw footage always comes back looking like a high-budget production. He is my go-to editor.",
     },
   ];
   return (
@@ -686,8 +689,9 @@ function Testimonials() {
         <SectionHeading
           eyebrow="Testimonials"
           title="What Clients | Say"
-          subtitle="Placeholders — add real client reviews at any time."
+          subtitle="What it's like to build something memorable together."
         />
+
         <div className="grid gap-6 md:grid-cols-3">
           {items.map((t, i) => (
             <div
