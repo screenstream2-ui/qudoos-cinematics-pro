@@ -703,7 +703,8 @@ function Testimonials() {
               <p className="mt-4 text-sm text-foreground/90">{t.body}</p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-[#7C3AED] to-[#A855F7] font-semibold text-white">
-                  {t.name.charAt(0)}
+                  {t.initials}
+
                 </div>
                 <div>
                   <div className="text-sm font-semibold">{t.name}</div>
