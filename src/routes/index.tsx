@@ -444,12 +444,12 @@ function Skills() {
 
 function PortfolioSection() {
   const cards = [
-    { id: "f2ml5npNBuM", cat: "Reel", title: "Modern Motion Graphics", meta: "Trending Style • 30s" },
-    { id: "-EGJjOOI5hQ", cat: "Cinematic", title: "Motivational Narrative", meta: "Storytelling • 45s" },
-    { id: "IHDWnKDeSUw", cat: "YouTube", title: "Dynamic Voiceover Edit", meta: "AI Voice & Graphics • 50s" },
-    { id: "2V5ZZ54Ja6c", cat: "Promo", title: "Trading Group Commercial", meta: "Promo Motion GFX • 35s" },
-    { id: "3tYOEj6ia1s", cat: "Motion", title: "High-End Concept Recreation", meta: "Stunning Visual GFX • 40s" },
-    { id: "9Nyy8cAcGYk", cat: "YouTube", title: "Creator Raw Footage Enhancement", meta: "Vlog Edit & Motion GFX • 45s" },
+    { id: "f2ml5npNBuM", cat: "Reel", title: "Modern Motion Graphics", meta: "Trending Style • 24s" },
+    { id: "-EGJjOOI5hQ", cat: "Cinematic", title: "Motivational Narrative", meta: "Storytelling • 22s" },
+    { id: "IHDWnKDeSUw", cat: "YouTube", title: "Dynamic Voiceover Edit", meta: "AI Voice & Graphics • 16s" },
+    { id: "2V5ZZ54Ja6c", cat: "Promo", title: "Trading Group Commercial", meta: "Promo Motion GFX • 28s" },
+    { id: "3tYOEj6ia1s", cat: "Motion", title: "High-End Concept Recreation", meta: "Stunning Visual GFX • 14s" },
+    { id: "9Nyy8cAcGYk", cat: "YouTube", title: "Creator Raw Footage Enhancement", meta: "Vlog Edit & Motion GFX • 24s" },
   ];
   return (
     <section id="work" className="relative py-24">
