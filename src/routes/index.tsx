@@ -444,20 +444,19 @@ function Skills() {
 
 function PortfolioSection() {
   const cards = [
-    { img: portfolio1, cat: "YouTube", title: "Tech Review Edit", meta: "Long-form • 12 min" },
-    { img: portfolio2, cat: "Reels", title: "Fashion Reel Series", meta: "Short-form • 30s" },
-    { img: portfolio3, cat: "Color", title: "Filmic LUT Pass", meta: "Grade" },
-    { img: portfolio4, cat: "Motion", title: "Logo Sting Pack", meta: "Motion GFX" },
-    { img: portfolio1, cat: "Shorts", title: "Viral Hook Edit", meta: "YT Shorts • 45s" },
-    { img: portfolio2, cat: "TikTok", title: "Trend Cut", meta: "TikTok • 22s" },
+    { id: "f2ml5npNBuM", cat: "Reel", title: "Modern Motion Graphics", meta: "Trending Style • 30s" },
+    { id: "-EGJjOOI5hQ", cat: "Cinematic", title: "Motivational Narrative", meta: "Storytelling • 45s" },
+    { id: "IHDWnKDeSUw", cat: "YouTube", title: "Dynamic Voiceover Edit", meta: "AI Voice & Graphics • 50s" },
+    { id: "2V5ZZ54Ja6c", cat: "Promo", title: "Trading Group Commercial", meta: "Promo Motion GFX • 35s" },
+    { id: "3tYOEj6ia1s", cat: "Motion", title: "High-End Concept Recreation", meta: "Stunning Visual GFX • 40s" },
+    { id: "9Nyy8cAcGYk", cat: "YouTube", title: "Creator Raw Footage Enhancement", meta: "Vlog Edit & Motion GFX • 45s" },
   ];
   return (
     <section id="work" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Portfolio"
-          title="Selected | Projects"
-          
+          title="Client | Showcases"
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((c, i) => (
@@ -466,16 +465,23 @@ function PortfolioSection() {
               className="reveal hover-lift group overflow-hidden rounded-3xl glass"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="zoom-img relative aspect-video">
-                <img
-                  src={c.img}
-                  alt={`${c.title} — ${c.cat} portfolio thumbnail placeholder`}
+              <div className="relative aspect-[9/16] overflow-hidden">
+                <iframe
+                  src={`https://www.youtube.com/embed/${c.id}`}
+                  title={c.title}
                   loading="lazy"
-                  data-editable={`portfolio-${i + 1}`}
-                  className="h-full w-full object-cover opacity-90"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full border-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/80 via-transparent to-transparent" />
-                <div className="absolute right-3 top-3 rounded-full glass-strong px-3 py-1 text-[10px] uppercase tracking-widest">
+                <div
+                  className="pointer-events-none absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-white"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.08)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(255, 255, 255, 0.15)",
+                  }}
+                >
                   {c.cat}
                 </div>
               </div>
@@ -485,9 +491,6 @@ function PortfolioSection() {
               </div>
             </article>
           ))}
-        </div>
-        <div className="reveal mt-10 text-center text-xs uppercase tracking-widest text-muted-foreground">
-          Placeholder thumbnails — upload your real project stills here.
         </div>
       </div>
     </section>
