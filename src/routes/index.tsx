@@ -764,47 +764,59 @@ function Testimonials() {
 }
 
 function RecentProjects() {
-  // Placeholders — replace src with real YouTube embed URLs any time.
-  const videos = [
-    { id: "dQw4w9WgXcQ", title: "Recent Project 01 — replace with your YouTube link" },
-    { id: "dQw4w9WgXcQ", title: "Recent Project 02 — replace with your YouTube link" },
-    { id: "dQw4w9WgXcQ", title: "Recent Project 03 — replace with your YouTube link" },
-    { id: "dQw4w9WgXcQ", title: "Recent Project 04 — replace with your YouTube link" },
+  const terms = [
+    {
+      icon: Shield,
+      title: "Payment & Priority",
+      body: "50% advance required before starting. This ensures your project is prioritized for focused, high-quality delivery. High-quality files shared after full payment.",
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Samples & Revisions",
+      body: "No free samples or complementary edits are offered. Evaluate past work or share references. Feedback must be submitted within 48 hours. Excessive revisions from unclear direction will be handled as new requests.",
+    },
+    {
+      icon: Ban,
+      title: "Excluded Content",
+      body: "Strictly no offensive language, hate speech, or unethical schemes (e.g., deceptive money-making). No abuse, roasting, or political advocacy.",
+    },
+    {
+      icon: Clock,
+      title: "Delivery Timeline",
+      body: "Short-form: 24–48 hours from raw footage. Long-form: 3–7 days based on complexity. Confirmed upfront.",
+    },
   ];
   return (
     <section className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Recent Projects"
-          title="Latest | Work"
-          subtitle="Embedded YouTube previews — paste your real video IDs when ready."
+          eyebrow="Terms of Cooperation"
+          title="Terms of | Cooperation"
+          subtitle="Short-form text guides you through our conditions for delivering exceptional results."
         />
         <div className="grid gap-6 md:grid-cols-2">
-          {videos.map((v, i) => (
-            <div
-              key={i}
-              className="reveal hover-lift glass overflow-hidden rounded-3xl"
-              style={{ transitionDelay: `${i * 60}ms` }}
-            >
-              <div className="aspect-video w-full">
-                <iframe
-                  className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${v.id}`}
-                  title={v.title}
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  data-editable={`youtube-embed-${i + 1}`}
-                />
+          {terms.map((t, i) => {
+            const Icon = t.icon;
+            return (
+              <div
+                key={i}
+                className="reveal group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-[#A855F7] hover:shadow-[0_0_40px_-8px_rgba(168,85,247,0.6)]"
+                style={{ transitionDelay: `${i * 60}ms` }}
+              >
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-transparent transition-all duration-300 ease-in-out group-hover:border-transparent group-hover:bg-[#A855F7] group-hover:shadow-[0_0_24px_rgba(168,85,247,0.55)]">
+                  <Icon className="h-6 w-6 text-white/80 transition-colors duration-300 group-hover:text-white" strokeWidth={1.75} />
+                </div>
+                <h3 className="mb-3 text-xl font-semibold text-white">{t.title}</h3>
+                <p className="text-sm leading-relaxed text-white/70">{t.body}</p>
               </div>
-              <div className="p-4 text-sm text-muted-foreground">{v.title}</div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+
 
 function FAQ() {
   const faqs = [
