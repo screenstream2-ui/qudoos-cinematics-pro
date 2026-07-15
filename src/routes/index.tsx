@@ -20,7 +20,11 @@ import {
   Menu,
   X,
   ChevronDown,
-} from "lucide-react";
+  Shield,
+  ClipboardCheck,
+  Ban,
+  Clock,
+
 import { useReveal } from "@/hooks/use-reveal";
 import profileHero from "@/assets/profile-hero.jpeg";
 import profileAbout from "@/assets/profile-about.jpeg";
