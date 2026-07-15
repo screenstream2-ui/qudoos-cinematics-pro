@@ -24,6 +24,8 @@ import {
   ClipboardCheck,
   Ban,
   Clock,
+} from "lucide-react";
+
 
 import { useReveal } from "@/hooks/use-reveal";
 import profileHero from "@/assets/profile-hero.jpeg";
