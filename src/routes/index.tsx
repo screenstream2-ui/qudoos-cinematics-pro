@@ -387,9 +387,51 @@ function FeaturedWork() {
 
 function Skills() {
   const tools = [
-    { name: "Adobe Premiere Pro", short: "Pr", color: "from-[#9999FF] to-[#5C5CFF]" },
-    { name: "Adobe After Effects", short: "Ae", color: "from-[#D291FF] to-[#9999FF]" },
-    { name: "Alight Motion", short: "AM", color: "from-[#A855F7] to-[#7C3AED]" },
+    {
+      name: "Adobe Premiere Pro",
+      logo: (
+        <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#2A0634" />
+          <path
+            d="M8 6.6h3.4c2.1 0 3.5 1.2 3.5 3.2 0 2.1-1.5 3.3-3.7 3.3H9.9v4.3H8V6.6zm3.3 4.9c1.2 0 1.9-.6 1.9-1.7 0-1.1-.7-1.6-1.9-1.6H9.9v3.3h1.4z"
+            fill="#9999FF"
+          />
+        </svg>
+      ),
+      bg: "bg-[#1a0a2e]",
+      ring: "ring-[#9999FF]/30",
+    },
+    {
+      name: "Adobe After Effects",
+      logo: (
+        <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#00005B" />
+          <path
+            d="M9.7 6.6L6 17.4h1.9l.9-2.7h3.6l.9 2.7h2L11.6 6.6H9.7zm-.4 6.5l1.3-4 1.3 4H9.3zm9.6-2c-2 0-3.3 1.5-3.3 3.4 0 2 1.4 3.3 3.5 3.3 1.1 0 2.1-.4 2.7-1l-.8-1.2c-.4.4-1.1.7-1.8.7-1 0-1.7-.5-1.8-1.5h4.5v-.5c0-2.1-1.2-3.2-3-3.2zm-1.5 2.7c.1-.9.7-1.4 1.5-1.4.9 0 1.4.5 1.4 1.4h-2.9z"
+            fill="#D291FF"
+          />
+        </svg>
+      ),
+      bg: "bg-[#02012a]",
+      ring: "ring-[#D291FF]/30",
+    },
+    {
+      name: "Alight Motion",
+      logo: (
+        <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
+          <defs>
+            <linearGradient id="am-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#A855F7" />
+              <stop offset="100%" stopColor="#7C3AED" />
+            </linearGradient>
+          </defs>
+          <rect width="24" height="24" rx="6" fill="url(#am-grad)" />
+          <path d="M9.5 7.5v9l7-4.5-7-4.5z" fill="#fff" />
+        </svg>
+      ),
+      bg: "bg-[#160826]",
+      ring: "ring-[#A855F7]/40",
+    },
   ];
   const skills = [
     "Storytelling & Pacing",
@@ -415,9 +457,9 @@ function Skills() {
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div
-                className={`mx-auto grid h-20 w-20 place-items-center rounded-2xl bg-gradient-to-br ${t.color} font-display text-3xl font-bold text-white shadow-[0_0_40px_rgba(124,58,237,0.4)]`}
+                className={`mx-auto grid h-20 w-20 place-items-center rounded-2xl ${t.bg} ring-1 ${t.ring} shadow-[0_0_40px_rgba(124,58,237,0.35)]`}
               >
-                {t.short}
+                {t.logo}
               </div>
               <div className="mt-5 text-lg font-semibold">{t.name}</div>
               <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
