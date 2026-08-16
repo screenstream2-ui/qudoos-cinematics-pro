@@ -453,7 +453,7 @@ function Skills() {
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div
-                className={`mx-auto grid h-20 w-20 place-items-center rounded-2xl ${t.bg} ring-1 ${t.ring} shadow-[0_0_40px_rgba(124,58,237,0.35)]`}
+                className={`mx-auto flex h-20 w-20 items-center justify-center rounded-2xl ${t.bg} ring-1 ${t.ring} shadow-[0_0_40px_rgba(124,58,237,0.35)]`}
               >
                 {t.logo}
               </div>
