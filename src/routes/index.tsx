@@ -422,7 +422,7 @@ function Skills() {
         <img
           src={alightMotionLogo.url}
           alt="Alight Motion logo"
-          className="h-10 w-10 object-contain"
+          className="h-12 w-12 object-contain"
         />
       ),
       bg: "bg-[#160826]",
