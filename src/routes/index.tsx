@@ -28,7 +28,7 @@ import {
 
 
 import { useReveal } from "@/hooks/use-reveal";
-import profileHero from "@/assets/profile-hero.jpeg";
+import profileHero from "@/assets/profile-hero.jpeg.asset.json";
 import profileAbout from "@/assets/profile-about.jpeg";
 import heroBg from "@/assets/hero-bg.jpg";
 import portfolio1 from "@/assets/portfolio-1.jpg";
@@ -210,7 +210,7 @@ function Hero() {
             <div className="relative h-72 w-72 overflow-hidden rounded-full border border-white/10 glass p-1.5">
               <div className="relative h-full w-full overflow-hidden rounded-full">
                 <img
-                  src={profileHero}
+                  src={profileHero.url}
                   alt="Abdul Qudoos — Professional video editor"
                   data-editable="profile-photo"
                   className="h-full w-full object-cover"
