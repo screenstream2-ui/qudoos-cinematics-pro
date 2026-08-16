@@ -37,6 +37,7 @@ import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import alightMotionLogo from "@/assets/alight-motion-logo.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
+import footerLogoAsset from "@/assets/footer-logo.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -947,9 +948,11 @@ function Footer() {
     <footer className="relative border-t border-white/5 py-12">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 text-center">
         <div className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#A855F7] font-bold text-white">
-            AQ
-          </span>
+          <img
+            src={footerLogoAsset.url}
+            alt="Abdul Qudoos logo"
+            className="h-9 w-9 rounded-lg object-contain"
+          />
           <span className="font-display text-lg font-semibold">Abdul Qudoos</span>
         </div>
         <p className="max-w-md text-sm text-muted-foreground">
