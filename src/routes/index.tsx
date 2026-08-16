@@ -28,7 +28,7 @@ import {
 
 
 import { useReveal } from "@/hooks/use-reveal";
-import profileHero from "@/assets/profile-hero.jpeg";
+import profileHero from "@/assets/profile-hero.jpeg.asset.json";
 import profileAbout from "@/assets/profile-about.jpeg";
 import heroBg from "@/assets/hero-bg.jpg";
 import portfolio1 from "@/assets/portfolio-1.jpg";
