@@ -35,6 +35,7 @@ import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
+import alightMotionLogo from "@/assets/alight-motion-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -418,16 +419,11 @@ function Skills() {
     {
       name: "Alight Motion",
       logo: (
-        <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden="true">
-          <defs>
-            <linearGradient id="am-grad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#A855F7" />
-              <stop offset="100%" stopColor="#7C3AED" />
-            </linearGradient>
-          </defs>
-          <rect width="24" height="24" rx="6" fill="url(#am-grad)" />
-          <path d="M9.5 7.5v9l7-4.5-7-4.5z" fill="#fff" />
-        </svg>
+        <img
+          src={alightMotionLogo.url}
+          alt="Alight Motion logo"
+          className="h-10 w-10 object-contain"
+        />
       ),
       bg: "bg-[#160826]",
       ring: "ring-[#A855F7]/40",
