@@ -36,6 +36,7 @@ import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 import alightMotionLogo from "@/assets/alight-motion-logo.png.asset.json";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -80,9 +81,11 @@ function Portfolio() {
             className={`glass flex items-center justify-between rounded-2xl px-5 py-3 transition-all ${scrolled ? "shadow-[0_10px_40px_-10px_rgba(124,58,237,0.35)]" : ""}`}
           >
             <a href="#top" className="flex items-center gap-2">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#A855F7] text-white font-bold">
-                AQ
-              </span>
+              <img
+                src={logoAsset.url}
+                alt="Abdul Qudoos logo"
+                className="h-8 w-8 rounded-lg object-contain"
+              />
               <span className="font-display font-semibold tracking-tight">Abdul Qudoos</span>
             </a>
             <nav className="hidden items-center gap-8 md:flex">
