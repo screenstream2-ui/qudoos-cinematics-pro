@@ -333,10 +333,10 @@ function Intro() {
 function FeaturedWork() {
   const items = [
     {
-      id: "f2ml5npNBuM",
-      tag: "Trending Reel",
-      title: "Modern Motion Graphics",
-      desc: "Modern Instagram-style edits utilizing slick typography, dynamic motion graphics, and highly engaging visual pacing.",
+      id: "oupF0f-U3WI",
+      tag: "DOCU-STYLE",
+      title: "Creator Documentary Remake",
+      desc: "Transformed raw creator footage into a modern, high-retention documentary edit featuring cinematic pacing and immersive visual storytelling.",
     },
     {
       id: "-EGJjOOI5hQ",
