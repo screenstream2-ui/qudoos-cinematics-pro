@@ -339,10 +339,10 @@ function FeaturedWork() {
       desc: "Transformed raw creator footage into a modern, high-retention documentary edit featuring cinematic pacing and immersive visual storytelling.",
     },
     {
-      id: "-EGJjOOI5hQ",
-      tag: "Cinematic Story",
-      title: "Motivational Narrative",
-      desc: "High-impact storytelling and seamless pacing crafted to deliver inspiring, high-retention cinematic experiences.",
+      id: "BFKidZ52-xw",
+      tag: "CINEMATIC DOCU",
+      title: "Documentary Style Upgrade",
+      desc: "Enhanced original creator footage with advanced documentary-style editing, adding visual depth, rich assets, and cinematic pacing to elevate the overall storytelling.",
     },
     {
       id: "IHDWnKDeSUw",
